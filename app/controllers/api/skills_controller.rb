@@ -1,6 +1,7 @@
 class Api::SkillsController < ApplicationController
 
   def index
-    render json: {message: "Sanity Check"}
+    @skills = Skill.all
+    render "index.json.jb"
   end
 end

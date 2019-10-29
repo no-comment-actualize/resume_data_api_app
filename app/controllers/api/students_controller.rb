@@ -1,7 +1,8 @@
 class Api::StudentsController < ApplicationController
 
   def index
-    render json: {message: "peanut butter jelly time x2"}
+    @students = Student.all
+    render "index.json.jb"
     #test content
   end
 end
