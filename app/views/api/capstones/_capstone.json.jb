@@ -1,0 +1,12 @@
+{
+  id: capstone.id,
+  name: capstone.name,
+  description: capstone.description,
+  url: capstone.description,
+  screenshot: capstone.screenshot,
+  student_id: capstone.student_id
+
+
+}
+
+
