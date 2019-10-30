@@ -10,4 +10,4 @@ end
 
 student[:student_skills] = @student.student_skills.map do |student_skill|
   render partial: "api/student_skills/student_skill", locals: { student_skill: student_skill}
-end 
+end  
