@@ -17,7 +17,9 @@ class Api::StudentsController < ApplicationController
       website: params[:website],
       resume: params[:resume],
       github: params[:github],
-      photo: params[:photo]
+      photo: params[:photo],
+      password: params[:password],
+      password_confirmation: params[:password_confirmation]
       )
     if @student.save
       render "show.json.jb"
