@@ -6,7 +6,7 @@ class Api::StudentsController < ApplicationController
   end
 
   def create
-    @student = Students.new(
+    @student = Student.new(
       first_name: params[:first_name],
       last_name: params[:last_name],
       email: params[:email],
@@ -22,7 +22,8 @@ class Api::StudentsController < ApplicationController
     if @student.save
       render "show.json.jb"
     else
-      render json: {errors: @student.errors.full_messages}, status: :bad_request  
+      render json: {errors: @student.errors.full_messages}, status: :bad_request 
+    end 
     
   end
 
@@ -47,12 +48,12 @@ class Api::StudentsController < ApplicationController
     @student.photo = params[:photo] || @student.photo
 
     @student.save
-      render "show.json.jb"
+    render "show.json.jb"
     
   end
 
   def destroy
-    @student = Student.find_by(id: params[:id])
+    student = Student.find_by(id: params[:id])
     student.destroy
     render json: {message: "Your student information has been removed from the database"}
     

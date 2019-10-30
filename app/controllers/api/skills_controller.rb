@@ -6,13 +6,14 @@ class Api::SkillsController < ApplicationController
   end
 
   def create
-    @skill = Skills.new(
+    @skill = Skill.new(
       name: params[:name]
       )
     if @skill.save
       render "show.json.jb"
     else
       render json: {errors: @skill.errors.full_messages}, status: :bad_request  
+    end
     
   end
 
@@ -33,7 +34,7 @@ class Api::SkillsController < ApplicationController
   end
 
   def destroy
-    @skill = Skill.find_by(id: params[:id])
+    skill = Skill.find_by(id: params[:id])
     skill.destroy
     render json: {message: "Your skill has been removed from the database"}
     

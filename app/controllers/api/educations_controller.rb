@@ -9,7 +9,7 @@ class Api::EducationsController < ApplicationController
       start_date: params[:start_date],
       end_date: params[:end_date],
       degree: params[:degree],
-      university_name: params[:university_name],
+      university: params[:university],
       details: params[:details],
       student_id: params[:student_id]
       )
@@ -31,9 +31,12 @@ class Api::EducationsController < ApplicationController
     @education.start_date = params[:start_date] || @education.start_date
     @education.end_date = params[:end_date] || @education.end_date
     @education.degree = params[:degree] || @education.degree
-    @education.university_name = params[:university_name] || @education.university_name
+    @education.university = params[:university] || @education.university
     @education.details = params[:details] || @education.details
     @education.student_id = params[:student_id] || @education.student_id
+    
+    @education.save
+    render "show.json.jb"
   end
 
   def destroy

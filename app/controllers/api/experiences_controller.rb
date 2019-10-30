@@ -9,7 +9,7 @@ class Api::ExperiencesController < ApplicationController
       start_date: params[:start_date],
       end_date: params[:end_date],
       job_title: params[:job_title],
-      company_name: params[:company_name],
+      company: params[:company],
       details: params[:details],
       student_id: params[:student_id]
       )
@@ -17,6 +17,7 @@ class Api::ExperiencesController < ApplicationController
       render "show.json.jb"
     else
       render json: {errors: @experience.errors.full_messages}, status: :bad_request
+    end
   end
 
   def show
@@ -30,7 +31,7 @@ class Api::ExperiencesController < ApplicationController
     @experience.start_date = params[:start_date] || @experience.start_date
     @experience.end_date = params[:end_date] || @experience.end_date
     @experience.job_title = params[:job_title] || @experience.job_title
-    @experience.company_name = params[:company_name] || @experience.company_name
+    @experience.company = params[:company] || @experience.company
     @experience.details = params[:details] || @experience.details
     @experience.student_id = params[:student_id] || @experience.student_id
 
@@ -39,8 +40,8 @@ class Api::ExperiencesController < ApplicationController
   end
 
   def destroy
-    @experience = Experience.find_by(id: params[:id])
-    capsone.destroy
+    experience = Experience.find_by(id: params[:id])
+    experience.destroy
     render json: { message: "Your work experience has been removed from the database" }
     
   end
