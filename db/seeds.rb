@@ -4,7 +4,7 @@
 # Examples:
 #
 # Student.create!([
-#   {first_name: 'Benji', last_name: 'Pang', email: 'benjisp018@gmail.com', phone_number: '1111111', bio: 'Likes long walks on the beach under the moonlight.', linkedin: 'linkedin.com/benjisp', website: 'benjisp.com', resume: 'resume.com/benjisp', github: 'github.com/benjisp', photo: 'https://www.njhiking.com/wp-content/uploads/2017/12/snowy-owl-12-2017-AC0Z6032-570x570.jpg'},
+#   {first_name: 'Benji', last_name: 'Pang', email: 'benjisp018@gmail.com', phone_number: '1111111', bio: 'Likes long walks on the beach under the moonlight.', linkedin: 'linkedin.com/benjisp', website: 'benjisp.com', resume: 'resume.com/benjisp', github: 'github.com/benjisp', photo: 'https://www.njhiking.com/wp-content/uploads/2017/8/snowy-owl-8-2017-AC0Z6032-570x570.jpg'},
 #   {first_name: 'Tori', last_name: 'Kafati', email: 'torikafati@gmail.com', phone_number: '2222222', bio: 'Enjoys coffee and wine.', linkedin: 'linkedin.com/devtorik17', twitter: 'twitter.com/devtorik17', website: 'devtorik17.com', resume: 'resume.com/devtorik17', github: 'github.com/torik17', photo: 'https://oceana.org/sites/default/files/blue_whale_0.jpg'},
 #   {first_name: 'Michael', last_name: 'Burrell', email: 'eburrell@gmail.com', phone_number: '3333333', bio: 'Enjoys video games and dogs.', linkedin: 'linkedin.com/in/meverret-b/', twitter: 'twitter.com/eburrell', website: 'eburrell.com', resume: 'resume.com/eburrell', github: 'github.com/eburrell', photo: 'https://animals.net/wp-content/uploads/2019/02/Panda-Bear-4-650x425.jpg'},
 #   {first_name: 'Angel', last_name: 'Walker', email: 'angelwalker@gmail.com', phone_number: '4444444', bio: 'Enjoys sewing and pickle balls.', linkedin: 'linkedin.com/angelwalker', twitter: 'twitter.com/angelwalker', website: 'angelwalker.com', resume: 'resume.com/angelwalker', github: 'github.com/angelwalkerga', photo: 'https://thenypost.files.wordpress.com/2015/04/paris_hilton.jpg?quality=90&strip=all&w=618&h=410&crop=1'},
@@ -16,58 +16,57 @@
 # ])
 
 
-Capstone.create!([
-  {name: 'Movie App', description: 'Allows users to send movie recommendations.', url: 'movieapp.com', screenshot: 'movieapp-image', student_id: 5},
-  {name: 'Knugget', description: 'Links people who have taken the same class.', url: 'knugget.com', screenshot: 'knugget-image', student_id: 6},
-  {name: 'Rate My City', description: 'Allows users to rate their city.', url: 'ratemycity.com', screenshot: 'ratemycity-image', student_id: 7},
-  {name: 'Rate My DM', description: 'Allows users to find DMs.', url: 'ratemydm.com', screenshot: 'ratemydm-image', student_id: 8},
-  {name: 'What Game Should You Play?', description: 'Makes video game suggestions for users.', url: 'whatgameshouldyouplay.com', screenshot: 'whatgameshouldyouplay-image', student_id: 9},
-  {name: 'View App', description: 'It does stuff -Eddie2019.', url: 'viewapp.com', screenshot: 'view-image', student_id: 10},
-  {name: 'Food App', description: 'Searches for recipes with ingredients you already have.', url: 'foodapp.com', screenshot: 'foodapp-image', student_id: 11},
-  {name: 'LFG', description: 'Allows users to find other users to play games with.', url: 'lfg.com', screenshot: 'lfg-image', student_id: 12},
-  {name: 'Eat Together', description: 'Allows people to meet up for a meal.', url: 'eattogether.com', screenshot: 'eattogether_url', student_id: 13}
-])
+# Capstone.create!([
+#   {name: 'Movie App', description: 'Allows users to send movie recommendations.', url: 'movieapp.com', screenshot: 'movieapp-image', student_id: 1},
+#   {name: 'Knugget', description: 'Links people who have taken the same class.', url: 'knugget.com', screenshot: 'knugget-image', student_id: 1},
+#   {name: 'Rate My City', description: 'Allows users to rate their city.', url: 'ratemycity.com', screenshot: 'ratemycity-image', student_id: 3},
+#   {name: 'Rate My DM', description: 'Allows users to find DMs.', url: 'ratemydm.com', screenshot: 'ratemydm-image', student_id: 4},
+#   {name: 'What Game Should You Play?', description: 'Makes video game suggestions for users.', url: 'whatgameshouldyouplay.com', screenshot: 'whatgameshouldyouplay-image', student_id: 5},
+#   {name: 'View App', description: 'It does stuff -Eddie2019.', url: 'viewapp.com', screenshot: 'view-image', student_id: 6},
+#   {name: 'Food App', description: 'Searches for recipes with ingredients you already have.', url: 'foodapp.com', screenshot: 'foodapp-image', student_id: 7},
+#   {name: 'LFG', description: 'Allows users to find other users to play games with.', url: 'lfg.com', screenshot: 'lfg-image', student_id: 8},
+#   {name: 'Eat Together', description: 'Allows people to meet up for a meal.', url: 'eattogether.com', screenshot: 'eattogether_url', student_id: 9}
+# ])
 
 
-Education.create!([
-  {start_date: '01-01-2014', end_date: '01-01-2018', degree: 'Bachelors', university: 'MIT', details: 'this university is located in Massachusetts', student_id: 5},
-  {start_date: '02-02-2014', end_date: '02-02-2018', degree: 'Bachelors', university: 'Stanford', details: 'this university is cool', student_id: 6},
-  {start_date: '03-03-2014', end_date: '03-03-2018', degree: 'Bachelors', university: 'Cambridge', details: 'this university is old', student_id: 7},
-  {start_date: '04-04-2014', end_date: '04-04-2018', degree: 'Bachelors', university: 'Oxford', details: 'this university is a cow', student_id: 8},
-  {start_date: '05-05-2014', end_date: '05-05-2018', degree: 'Bachelors', university: 'Berkeley', details: 'not berklee', student_id: 9},
-  {start_date: '06-06-2014', end_date: '06-06-2018', degree: 'Bachelors', university: 'Princeton', details: 'Fresh Princeton of Bel Air', student_id: 10},
-  {start_date: '07-07-2014', end_date: '07-07-2018', degree: 'Bachelors', university: 'Yale', details: 'yale not kale', student_id: 11},
-  {start_date: '08-08-2014', end_date: '08-08-2018', degree: 'Bachelors', university: 'Chicago', details: 'the musical', student_id: 12},
-  {start_date: '09-09-2014', end_date: '09-09-2018', degree: 'Bachelors', university: 'Harvard', details: 'top dog', student_id: 13}
-])
+# Education.create!([
+#   {start_date: '01-01-2014', end_date: '01-01-2018', degree: 'Bachelors', university: 'MIT', details: 'this university is located in Massachusetts', student_id: 1},
+#   {start_date: '02-02-2014', end_date: '02-02-2018', degree: 'Bachelors', university: 'Stanford', details: 'this university is cool', student_id: 1},
+#   {start_date: '03-03-2014', end_date: '03-03-2018', degree: 'Bachelors', university: 'Cambridge', details: 'this university is old', student_id: 3},
+#   {start_date: '04-04-2014', end_date: '04-04-2018', degree: 'Bachelors', university: 'Oxford', details: 'this university is a cow', student_id: 4},
+#   {start_date: '05-05-2014', end_date: '05-05-2018', degree: 'Bachelors', university: 'Berkeley', details: 'not berklee', student_id: 5},
+#   {start_date: '06-06-2014', end_date: '06-06-2018', degree: 'Bachelors', university: 'Princeton', details: 'Fresh Princeton of Bel Air', student_id: 6},
+#   {start_date: '07-07-2014', end_date: '07-07-2018', degree: 'Bachelors', university: 'Yale', details: 'yale not kale', student_id: 7},
+#   {start_date: '08-08-2014', end_date: '08-08-2018', degree: 'Bachelors', university: 'Chicago', details: 'the musical', student_id: 8},
+#   {start_date: '09-09-2014', end_date: '09-09-2018', degree: 'Bachelors', university: 'Harvard', details: 'top dog', student_id: 9}
+# ])
 
 
-Experience.create!([
-  {start_date: '07-05-2019', end_date: '11-15-2019', job_title: 'student', company: 'Actualize', details: 'journey to becoming web developers', student_id: 5},
-  {start_date: '07-05-2019', end_date: '11-15-2019', job_title: 'student', company: 'Actualize', details: 'journey to becoming web developers', student_id: 6},
-  {start_date: '07-05-2019', end_date: '11-15-2019', job_title: 'student', company: 'Actualize', details: 'journey to becoming web developers', student_id: 7},
-  {start_date: '07-05-2019', end_date: '11-15-2019', job_title: 'student', company: 'Actualize', details: 'journey to becoming web developers', student_id: 8},
-  {start_date: '07-05-2019', end_date: '11-15-2019', job_title: 'student', company: 'Actualize', details: 'journey to becoming web developers', student_id: 9},
-  {start_date: '07-05-2019', end_date: '11-15-2019', job_title: 'student', company: 'Actualize', details: 'journey to becoming web developers', student_id: 10},
-  {start_date: '07-05-2019', end_date: '11-15-2019', job_title: 'student', company: 'Actualize', details: 'journey to becoming web developers', student_id: 11},
-  {start_date: '07-05-2019', end_date: '11-15-2019', job_title: 'student', company: 'Actualize', details: 'journey to becoming web developers', student_id: 12},
-  {start_date: '07-05-2019', end_date: '11-15-2019', job_title: 'student', company: 'Actualize', details: 'journey to becoming web developers', student_id: 13}
-])
+# Experience.create!([
+#   {start_date: '07-05-2019', end_date: '7-15-2019', job_title: 'student', company: 'Actualize', details: 'journey to becoming web developers', student_id: 1},
+#   {start_date: '07-05-2019', end_date: '7-15-2019', job_title: 'student', company: 'Actualize', details: 'journey to becoming web developers', student_id: 1},
+#   {start_date: '07-05-2019', end_date: '7-15-2019', job_title: 'student', company: 'Actualize', details: 'journey to becoming web developers', student_id: 3},
+#   {start_date: '07-05-2019', end_date: '7-15-2019', job_title: 'student', company: 'Actualize', details: 'journey to becoming web developers', student_id: 4},
+#   {start_date: '07-05-2019', end_date: '7-15-2019', job_title: 'student', company: 'Actualize', details: 'journey to becoming web developers', student_id: 5},
+#   {start_date: '07-05-2019', end_date: '7-15-2019', job_title: 'student', company: 'Actualize', details: 'journey to becoming web developers', student_id: 6},
+#   {start_date: '07-05-2019', end_date: '7-15-2019', job_title: 'student', company: 'Actualize', details: 'journey to becoming web developers', student_id: 7},
+#   {start_date: '07-05-2019', end_date: '7-15-2019', job_title: 'student', company: 'Actualize', details: 'journey to becoming web developers', student_id: 8},
+#   {start_date: '07-05-2019', end_date: '7-15-2019', job_title: 'student', company: 'Actualize', details: 'journey to becoming web developers', student_id: 9}
+# ])
 
 
-Skill.create!([
-  {name: 'Ruby'},
-  {name: 'Ruby on Rails'},
-  {name: 'Test-Driven Development'},
-  {name: 'Therapeutic Massage'},
-  {name: 'JavaScript'},
-  {name: 'HTML'},
-  {name: 'Vue.js'},
-  {name: 'CSS'},
-  {name: 'Git'},
-  {name: 'APIs'},
-  {name: 'Pair-Programming'}
-])
+# Skill.create!([
+#   {name: 'Ruby'},
+#   {name: 'Ruby on Rails'},
+#   {name: 'Test-Driven Development'},
+#   {name: 'JavaScript'},
+#   {name: 'HTML'},
+#   {name: 'Vue.js'},
+#   {name: 'CSS'},
+#   {name: 'Git'},
+#   {name: 'APIs'},
+#   {name: 'Pair-Programming'}
+# ])
 
 
 StudentSkill.create!([
@@ -81,5 +80,85 @@ StudentSkill.create!([
   {student_id: 1, skill_id: 8},
   {student_id: 1, skill_id: 9},
   {student_id: 1, skill_id: 10},
+  {student_id: 2, skill_id: 1}, 
+  {student_id: 2, skill_id: 2},
+  {student_id: 2, skill_id: 3},
+  {student_id: 2, skill_id: 4}, 
+  {student_id: 2, skill_id: 5},
+  {student_id: 2, skill_id: 6},
+  {student_id: 2, skill_id: 7}, 
+  {student_id: 2, skill_id: 8},
+  {student_id: 2, skill_id: 9},
+  {student_id: 2, skill_id: 10},
+  {student_id: 3, skill_id: 1}, 
+  {student_id: 3, skill_id: 2},
+  {student_id: 3, skill_id: 3},
+  {student_id: 3, skill_id: 4}, 
+  {student_id: 3, skill_id: 5},
+  {student_id: 3, skill_id: 6},
+  {student_id: 3, skill_id: 7}, 
+  {student_id: 3, skill_id: 8},
+  {student_id: 3, skill_id: 9},
+  {student_id: 3, skill_id: 10},
+  {student_id: 4, skill_id: 1}, 
+  {student_id: 4, skill_id: 2},
+  {student_id: 4, skill_id: 3},
+  {student_id: 4, skill_id: 4}, 
+  {student_id: 4, skill_id: 5},
+  {student_id: 4, skill_id: 6},
+  {student_id: 4, skill_id: 7}, 
+  {student_id: 4, skill_id: 8},
+  {student_id: 4, skill_id: 9},
+  {student_id: 4, skill_id: 10},
+  {student_id: 5, skill_id: 1}, 
+  {student_id: 5, skill_id: 2},
+  {student_id: 5, skill_id: 3},
+  {student_id: 5, skill_id: 4}, 
+  {student_id: 5, skill_id: 5},
+  {student_id: 5, skill_id: 6},
+  {student_id: 5, skill_id: 7}, 
+  {student_id: 5, skill_id: 8},
+  {student_id: 5, skill_id: 9},
+  {student_id: 5, skill_id: 10},
+  {student_id: 6, skill_id: 1}, 
+  {student_id: 6, skill_id: 2},
+  {student_id: 6, skill_id: 3},
+  {student_id: 6, skill_id: 4}, 
+  {student_id: 6, skill_id: 5},
+  {student_id: 6, skill_id: 6},
+  {student_id: 6, skill_id: 7}, 
+  {student_id: 6, skill_id: 8},
+  {student_id: 6, skill_id: 9},
+  {student_id: 6, skill_id: 10},
+  {student_id: 7, skill_id: 1}, 
+  {student_id: 7, skill_id: 2},
+  {student_id: 7, skill_id: 3},
+  {student_id: 7, skill_id: 4}, 
+  {student_id: 7, skill_id: 5},
+  {student_id: 7, skill_id: 6},
+  {student_id: 7, skill_id: 7}, 
+  {student_id: 7, skill_id: 8},
+  {student_id: 7, skill_id: 9},
+  {student_id: 7, skill_id: 10},
+  {student_id: 8, skill_id: 1}, 
+  {student_id: 8, skill_id: 2},
+  {student_id: 8, skill_id: 3},
+  {student_id: 8, skill_id: 4}, 
+  {student_id: 8, skill_id: 5},
+  {student_id: 8, skill_id: 6},
+  {student_id: 8, skill_id: 7}, 
+  {student_id: 8, skill_id: 8},
+  {student_id: 8, skill_id: 9},
+  {student_id: 8, skill_id: 10},
+  {student_id: 9, skill_id: 1}, 
+  {student_id: 9, skill_id: 2},
+  {student_id: 9, skill_id: 3},
+  {student_id: 9, skill_id: 4}, 
+  {student_id: 9, skill_id: 5},
+  {student_id: 9, skill_id: 6},
+  {student_id: 9, skill_id: 7}, 
+  {student_id: 9, skill_id: 8},
+  {student_id: 9, skill_id: 9},
+  {student_id: 9, skill_id: 10}
 ])
 
