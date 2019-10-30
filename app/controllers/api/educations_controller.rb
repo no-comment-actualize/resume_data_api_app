@@ -16,7 +16,7 @@ class Api::EducationsController < ApplicationController
     if @education.save
       render "show.json.jb"
     else
-      render json: {errors: @recipe.errors.full_messages}, status: 422
+      render json: {errors: @education.errors.full_messages}, status: 422
     end
   end
 
