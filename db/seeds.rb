@@ -28,32 +28,58 @@ Capstone.create!([
   {name: 'Eat Together', description: 'Allows people to meet up for a meal.', url: 'eattogether.com', screenshot: 'eattogether_url', student_id: 13}
 ])
 
+
 Education.create!([
-  {start_date: '01-01-2014', end_date: '01-01-2018', degree: 'Bachelors', university: 'MIT', details: 'this university is located in Massachusetts', student_id: '5'},
-  {start_date: '02-02-2014', end_date: '02-02-2018', degree: 'Bachelors', university: 'Stanford', details: 'this university is cool', student_id: '6'},
-  {start_date: '03-03-2014', end_date: '03-03-2018', degree: 'Bachelors', university: 'Cambridge', details: 'this university is old', student_id: '7'},
-  {start_date: '04-04-2014', end_date: '04-04-2018', degree: 'Bachelors', university: 'Oxford', details: 'this university is a cow', student_id: '8'},
-  {start_date: '05-05-2014', end_date: '05-05-2018', degree: 'Bachelors', university: 'Berkeley', details: 'not berklee', student_id: '9'},
-  {start_date: '10-10-2019', end_date: '10-12-2019', degree: 'the bachelor', university: 'sky high', details: 'this university is high', student_id: '2'},
-  {start_date: '10-10-2019', end_date: '10-12-2019', degree: 'the bachelor', university: 'sky high', details: 'this university is high', student_id: '2'},
-  {start_date: '10-10-2019', end_date: '10-12-2019', degree: 'the bachelor', university: 'sky high', details: 'this university is high', student_id: '2'},
-  {start_date: '10-10-2019', end_date: '10-12-2019', degree: 'the bachelor', university: 'sky high', details: 'this university is high', student_id: '2'}
+  {start_date: '01-01-2014', end_date: '01-01-2018', degree: 'Bachelors', university: 'MIT', details: 'this university is located in Massachusetts', student_id: 5},
+  {start_date: '02-02-2014', end_date: '02-02-2018', degree: 'Bachelors', university: 'Stanford', details: 'this university is cool', student_id: 6},
+  {start_date: '03-03-2014', end_date: '03-03-2018', degree: 'Bachelors', university: 'Cambridge', details: 'this university is old', student_id: 7},
+  {start_date: '04-04-2014', end_date: '04-04-2018', degree: 'Bachelors', university: 'Oxford', details: 'this university is a cow', student_id: 8},
+  {start_date: '05-05-2014', end_date: '05-05-2018', degree: 'Bachelors', university: 'Berkeley', details: 'not berklee', student_id: 9},
+  {start_date: '06-06-2014', end_date: '06-06-2018', degree: 'Bachelors', university: 'Princeton', details: 'Fresh Princeton of Bel Air', student_id: 10},
+  {start_date: '07-07-2014', end_date: '07-07-2018', degree: 'Bachelors', university: 'Yale', details: 'yale not kale', student_id: 11},
+  {start_date: '08-08-2014', end_date: '08-08-2018', degree: 'Bachelors', university: 'Chicago', details: 'the musical', student_id: 12},
+  {start_date: '09-09-2014', end_date: '09-09-2018', degree: 'Bachelors', university: 'Harvard', details: 'top dog', student_id: 13}
 ])
-
-
 
 
 Experience.create!([
-  {start_date: '07-07-2019', end_date: '07-09-2019', job_title: 'fireman', company: 'fireproof', details: 'im so hot', student_id: '1'},
-  {start_date: '11-11-2019', end_date: '11-13-2019', job_title: 'waterman', company: 'waterproof', details: 'im so wet', student_id: '2'}
+  {start_date: '07-05-2019', end_date: '11-15-2019', job_title: 'student', company: 'Actualize', details: 'journey to becoming web developers', student_id: 5},
+  {start_date: '07-05-2019', end_date: '11-15-2019', job_title: 'student', company: 'Actualize', details: 'journey to becoming web developers', student_id: 6},
+  {start_date: '07-05-2019', end_date: '11-15-2019', job_title: 'student', company: 'Actualize', details: 'journey to becoming web developers', student_id: 7},
+  {start_date: '07-05-2019', end_date: '11-15-2019', job_title: 'student', company: 'Actualize', details: 'journey to becoming web developers', student_id: 8},
+  {start_date: '07-05-2019', end_date: '11-15-2019', job_title: 'student', company: 'Actualize', details: 'journey to becoming web developers', student_id: 9},
+  {start_date: '07-05-2019', end_date: '11-15-2019', job_title: 'student', company: 'Actualize', details: 'journey to becoming web developers', student_id: 10},
+  {start_date: '07-05-2019', end_date: '11-15-2019', job_title: 'student', company: 'Actualize', details: 'journey to becoming web developers', student_id: 11},
+  {start_date: '07-05-2019', end_date: '11-15-2019', job_title: 'student', company: 'Actualize', details: 'journey to becoming web developers', student_id: 12},
+  {start_date: '07-05-2019', end_date: '11-15-2019', job_title: 'student', company: 'Actualize', details: 'journey to becoming web developers', student_id: 13}
 ])
 
+
 Skill.create!([
-  {name: 'Cooking'},
-  {name: 'Fishing'}
+  {name: 'Ruby'},
+  {name: 'Ruby on Rails'},
+  {name: 'Test-Driven Development'},
+  {name: 'Therapeutic Massage'},
+  {name: 'JavaScript'},
+  {name: 'HTML'},
+  {name: 'Vue.js'},
+  {name: 'CSS'},
+  {name: 'Git'},
+  {name: 'APIs'},
+  {name: 'Pair-Programming'}
 ])
+
 
 StudentSkill.create!([
   {student_id: 1, skill_id: 1}, 
-  {student_id: 1, skill_id: 2}
+  {student_id: 1, skill_id: 2},
+  {student_id: 1, skill_id: 3},
+  {student_id: 1, skill_id: 4}, 
+  {student_id: 1, skill_id: 5},
+  {student_id: 1, skill_id: 6},
+  {student_id: 1, skill_id: 7}, 
+  {student_id: 1, skill_id: 8},
+  {student_id: 1, skill_id: 9},
+  {student_id: 1, skill_id: 10},
 ])
+
