@@ -13,7 +13,7 @@ class Api::ExperiencesController < ApplicationController
       details: params[:details],
       student_id: params[:student_id]
       )
-    if @experiences.save
+    if @experience.save
       render "show.json.jb"
     else
       render json: {errors: @experience.errors.full_messages}, status: :bad_request
