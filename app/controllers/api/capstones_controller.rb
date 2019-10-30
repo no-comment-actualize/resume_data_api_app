@@ -40,7 +40,7 @@ class Api::CapstonesController < ApplicationController
   end
 
   def destroy
-    @capstone = Capstone.find_by(id: params[:id])
+    capstone = Capstone.find_by(id: params[:id])
     capstone.destroy
     render json: { message: "Your capstone project has been removed from the database" }
     

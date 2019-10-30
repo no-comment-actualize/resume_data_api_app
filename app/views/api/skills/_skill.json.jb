@@ -1,6 +1,4 @@
 {
   id: skill.id,
-  name: skill.name,
-  student_id: skill.student_id
-
+  name: skill.name
 }
