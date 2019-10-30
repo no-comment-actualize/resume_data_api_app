@@ -39,3 +39,16 @@ Education.create!([
   {start_date: '10-10-2019', end_date: '10-12-2019', degree: 'the bachelor', university: 'sky high', details: 'this university is high', student_id: '2'},
   {start_date: '10-10-2019', end_date: '10-12-2019', degree: 'the bachelor', university: 'sky high', details: 'this university is high', student_id: '2'}
 ])
+
+
+
+
+Experience.create!([
+  {start_date: '07-07-2019', end_date: '07-09-2019', job_title: 'fireman', company: 'fireproof', details: 'im so hot', student_id: '1'},
+  {start_date: '11-11-2019', end_date: '11-13-2019', job_title: 'waterman', company: 'waterproof', details: 'im so wet', student_id: '2'}
+])
+
+Skill.create!([
+  {name: 'Cooking', student_id: '1'},
+  {name: 'Fishing', student_id: '2'}
+])
