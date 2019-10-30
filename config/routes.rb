@@ -32,5 +32,9 @@ Rails.application.routes.draw do
     get "/capstones/:id" => "capstones#show"
     patch "/capstones/:id" => "capstones#update"
     delete "/capstones/:id" => "capstones#destroy"
+
+    post "/users" => "users#create"
+
+    post "/sessions" => "sessions#create"
   end
 end

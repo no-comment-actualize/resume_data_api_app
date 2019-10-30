@@ -49,6 +49,11 @@ Experience.create!([
 ])
 
 Skill.create!([
-  {name: 'Cooking', student_id: '1'},
-  {name: 'Fishing', student_id: '2'}
+  {name: 'Cooking'},
+  {name: 'Fishing'}
+])
+
+StudentSkill.create!([
+  {student_id: 1, skill_id: 1}, 
+  {student_id: 1, skill_id: 2}
 ])
