@@ -5,4 +5,20 @@ class Api::StudentsController < ApplicationController
     render "index.json.jb"
     #test content
   end
+
+   def create
+    
+  end
+
+  def show
+    
+  end
+
+  def update
+    
+  end
+
+  def destroy
+    
+  end
 end
