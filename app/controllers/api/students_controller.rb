@@ -1,5 +1,7 @@
 class Api::StudentsController < ApplicationController
 
+  before_action :authenticate_student, only: [:create, :update, :destroy]
+
   def index
     @students = Student.all
     render "index.json.jb"
@@ -36,28 +38,37 @@ class Api::StudentsController < ApplicationController
 
   def update
     @student = Student.find_by(id: params[:id])
+    if current_student.id == @student.id
+      @student.first_name = params[:first_name] || @student.first_name
+      @student.last_name = params[:last_name] || @student.last_name
+      @student.email = params[:email] || @student.email
+      @student.phone_number = params[:phone_number] || @student.phone_number
+      @student.bio = params[:bio] || @student.bio
+      @student.linkedin = params[:linkedin] || @student.linkedin
+      @student.twitter = params[:twitter] || @student.twitter
+      @student.website = params[:website] || @student.website
+      @student.resume = params[:resume] || @student.resume
+      @student.github = params[:github] || @student.github
+      @student.photo = params[:photo] || @student.photo
 
-    @student.first_name = params[:first_name] || @student.first_name
-    @student.last_name = params[:last_name] || @student.last_name
-    @student.email = params[:email] || @student.email
-    @student.phone_number = params[:phone_number] || @student.phone_number
-    @student.bio = params[:bio] || @student.bio
-    @student.linkedin = params[:linkedin] || @student.linkedin
-    @student.twitter = params[:twitter] || @student.twitter
-    @student.website = params[:website] || @student.website
-    @student.resume = params[:resume] || @student.resume
-    @student.github = params[:github] || @student.github
-    @student.photo = params[:photo] || @student.photo
+      @student.save
+      render "show.json.jb"
 
-    @student.save
-    render "show.json.jb"
+    else
+      render json: {error: "Student information can only be edited by original student."}, status: :unauthorized
+
+    end  
     
   end
 
   def destroy
     student = Student.find_by(id: params[:id])
-    student.destroy
-    render json: {message: "Your student information has been removed from the database"}
+    if current_student.id == student.id
+      student.destroy
+      render json: {message: "Your student information has been removed from the database"}
+    else
+      render json: {error: "Student information can only be deleted by original student."}, status: :unauthorized
+    end  
     
   end
 end
