@@ -2,9 +2,7 @@
   id: capstone.id,
   name: capstone.name,
   description: capstone.description,
-  url: capstone.description,
+  url: capstone.url,
   screenshot: capstone.screenshot,
   student_id: capstone.student_id
 }
-
-
