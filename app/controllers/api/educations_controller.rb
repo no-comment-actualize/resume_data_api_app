@@ -11,7 +11,7 @@ class Api::EducationsController < ApplicationController
       degree: params[:degree],
       university: params[:university],
       details: params[:details],
-      student_id: params[:student_id]
+      student_id: current_student.id 
       )
     if @education.save
       render "show.json.jb"
@@ -33,7 +33,7 @@ class Api::EducationsController < ApplicationController
     @education.degree = params[:degree] || @education.degree
     @education.university = params[:university] || @education.university
     @education.details = params[:details] || @education.details
-    @education.student_id = params[:student_id] || @education.student_id
+   
     
     @education.save
     render "show.json.jb"

@@ -1,5 +1,5 @@
 class Api::StudentSkillsController < ApplicationController
-  # before_action :authenticate_user, only: [:create, :update, :destroy]
+  before_action :authenticate_student, only: [:create, :update, :destroy]
 
   def show
     @student_skill = StudentSkill.find(params[:id])
@@ -8,7 +8,7 @@ class Api::StudentSkillsController < ApplicationController
 
   def create
     @student_skill = StudentSkill.new(
-      student_id: params[:student_id],
+      student_id: current_student.id,
       skill_id: params[:skill_id]
       )
     @student_skill.save
@@ -17,7 +17,7 @@ class Api::StudentSkillsController < ApplicationController
 
   def update
     @student_skill = StudentSkill.find(params[:id])
-    if @student_skill.student_id == current_user[:id]
+    if @student_skill.student_id == current_student.id
       @skill_id = params[:skill_id]
     @student_skill.save  
     end
@@ -26,7 +26,7 @@ class Api::StudentSkillsController < ApplicationController
 
   def destroy
     @student_skill = StudentSkill.find(params[:id])
-    if @student_skill.student_id == current_user[:id]
+    if @student_skill.student_id == current_student.id 
       @student_skill.destroy
     else 
     render json: {}, status: :unauthorized
