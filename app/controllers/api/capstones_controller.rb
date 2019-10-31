@@ -1,4 +1,7 @@
 class Api::CapstonesController < ApplicationController
+
+  before_action :authenticate_student, only: [:create, :update, :destroy]
+
   def index
     @capstones = Capstone.all
     render "index.json.jb"
@@ -27,21 +30,31 @@ class Api::CapstonesController < ApplicationController
   end
 
   def update
+    
     @capstone = Capstone.find_by(id: params[:id])
+    if current_student.id == @capstone.student_id
+      @capstone.name = params[:name] || @capstone.name
+      @capstone.description = params[:description] || @capstone.description    
+      @capstone.url = params[:url] || @capstone.url
+      @capstone.screenshot = params[:screenshot] || @capstone.screenshot
 
-    @capstone.name = params[:name] || @capstone.name
-    @capstone.description = params[:description] || @capstone.description    
-    @capstone.url = params[:url] || @capstone.url
-    @capstone.screenshot = params[:screenshot] || @capstone.screenshot
-
-    @capstone.save
-    render "show.json.jb"
+      @capstone.save
+      render "show.json.jb"
+    else
+      render json: {error: "Capstones can only be edited by original owners."}, status: :unauthorized
+    end  
   end
 
   def destroy
+    
     capstone = Capstone.find_by(id: params[:id])
-    capstone.destroy
-    render json: { message: "Your capstone project has been removed from the database" }
+    if current_student.id == capstone.student_id
+      capstone.destroy
+      render json: { message: "Your capstone project has been removed from the database" }
+    else
+      render json: {error: "Capstones can only be deleted by original owners."}, status: :unauthorized
+
+    end  
     
   end
 end
