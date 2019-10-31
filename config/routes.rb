@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  get "/students/:id" => "students#show"
 
   namespace :api do
     get "/students" => "students#index"
