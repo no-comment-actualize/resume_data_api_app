@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get "/students" => "students#show"
+
   namespace :api do
     get "/students" => "students#index"
     post "/students" => "students#create"
@@ -21,7 +23,7 @@ Rails.application.routes.draw do
 
     get "/skills" => "skills#index"
     post "/skills" => "skills#create"
-    # get "/skills/:id" => "skills#show"
+    get "/skills/:id" => "skills#show"
     patch "/skills/:id" => "skills#update"
     delete "/skills/:id" => "skills#destroy"
 
