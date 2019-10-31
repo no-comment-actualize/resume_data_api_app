@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :null_session
 
-  def current_user
+  def current_student
     auth_headers = request.headers['Authorization']
     if auth_headers.present? && auth_headers[/(?<=\A(Bearer ))\S+\z/]
       token = auth_headers[/(?<=\A(Bearer ))\S+\z/]
@@ -19,10 +19,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  helper_method :current_user
+  helper_method :current_student
 
-  def authenticate_user
-    unless current_user
+  def authenticate_student
+    unless current_student
       render json: {}, status: :unauthorized
     end
   end

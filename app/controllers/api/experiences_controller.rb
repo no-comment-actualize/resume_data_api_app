@@ -11,7 +11,7 @@ class Api::ExperiencesController < ApplicationController
       job_title: params[:job_title],
       company: params[:company],
       details: params[:details],
-      student_id: params[:student_id]
+      student_id: current_student.id 
       )
     if @experience.save
       render "show.json.jb"
@@ -33,7 +33,7 @@ class Api::ExperiencesController < ApplicationController
     @experience.job_title = params[:job_title] || @experience.job_title
     @experience.company = params[:company] || @experience.company
     @experience.details = params[:details] || @experience.details
-    @experience.student_id = params[:student_id] || @experience.student_id
+    
 
     @experience.save
     render "show.json.jb" 
